@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-cream-light font-sans text-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply text-ink;
+  }
+  ::selection {
+    @apply bg-bordo text-cream-light;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full bg-bordo px-6 py-2.5 text-sm font-bold text-cream-light
+      shadow-btn transition duration-200 hover:-translate-y-0.5 hover:bg-bordo-dark
+      focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-bordo/25;
+  }
+  /* Outline button for dark (forest) backgrounds */
+  .btn-ghost {
+    @apply bg-transparent text-cream shadow-none ring-1 ring-cream/60 hover:bg-cream/10;
+  }
+  .btn-sm {
+    @apply px-5 py-2 text-[13px];
+  }
+
+  .field {
+    @apply w-full rounded-lg border border-line bg-cream-paper px-4 py-3 text-sm text-ink
+      placeholder:text-muted transition focus:border-bordo focus:outline-none focus:ring-4 focus:ring-bordo/10;
+  }
+
+  .meta {
+    @apply block text-xs tracking-wide text-muted;
+  }
+}
+
+/* Scroll reveal (toggled by useReveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-float { animation: none; }
+}
