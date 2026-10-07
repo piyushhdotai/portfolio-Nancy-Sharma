@@ -29,9 +29,19 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        progress: {
+          from: { transform: 'scaleX(0)' },
+          to: { transform: 'scaleX(1)' },
+        },
+        'fade-up': {
+          from: { opacity: '0', transform: 'translateY(8px)' },
+          to: { opacity: '1', transform: 'none' },
+        },
       },
       animation: {
         float: 'float 6s ease-in-out infinite',
+        progress: 'progress 5s linear forwards', // matches the gallery slide interval
+        'fade-up': 'fade-up 0.5s ease-out',
       },
     },
   },

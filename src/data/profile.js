@@ -30,6 +30,7 @@ export const navLinks = [
   { href: '#expertise', label: 'Expertise' },
   { href: '#experience', label: 'Experience' },
   { href: '#programs', label: 'Programs' },
+  { href: '#gallery', label: 'Gallery' },
   { href: '#contact', label: 'Contact Me' },
 ]
 
@@ -276,4 +277,68 @@ export const programs = [
   },
 ]
 
-export const services = ['Training', 'Writing', 'User Experience Writing', 'Editing']
+// Gallery slider, in display order. Images live in src/assets/gallery/;
+// to add one, drop it in that folder and add an entry here with its file name.
+export const gallery = [
+  {
+    file: 'gcet-resume-workshop.jpg',
+    tag: 'Workshop',
+    title: 'Resume Building Workshop',
+    text: 'Showing students how to present projects and case studies so recruiters see the impact.',
+    place: 'GCET, Greater Noida',
+  },
+  {
+    file: 'auditorium-session.jpg',
+    tag: 'Event',
+    title: 'A full house in the auditorium',
+    text: 'An interactive session with a large student cohort, with trainers and colleagues on stage.',
+  },
+  {
+    file: 'gcet-workshop-cohort.jpg',
+    tag: 'Workshop',
+    title: 'With the workshop cohort',
+    text: 'Students and faculty together at the close of a training session.',
+    place: 'GCET, Greater Noida',
+  },
+  {
+    file: 'cu-dcpd-batch-1.jpg',
+    tag: 'Professional readiness',
+    title: 'Batch in business formals',
+    text: 'Professional readiness training, with students dressed for the interviews ahead.',
+    place: 'Chandigarh University',
+  },
+  {
+    file: 'classroom-session.jpg',
+    tag: 'Classroom',
+    title: 'After a classroom session',
+    text: 'A communication skills class that ended, as the best ones do, with a group photo.',
+  },
+  {
+    file: 'cu-dcpd-batch-2.jpg',
+    tag: 'Professional readiness',
+    title: 'Placement-ready and proud',
+    text: 'Another professional readiness batch at the end of their training.',
+    place: 'Chandigarh University',
+  },
+  {
+    file: 'formal-group.jpg',
+    tag: 'Professional readiness',
+    title: 'Students and trainers together',
+    text: 'Students and trainers in formal attire after a professional readiness session.',
+  },
+  {
+    file: 'cu-dcpd-batch-3.jpg',
+    tag: 'Professional readiness',
+    title: 'One more confident cohort',
+    text: 'Verbal ability and soft skills training for a placement-bound batch.',
+    place: 'Chandigarh University',
+  },
+  {
+    file: 'small-group-batch.jpg',
+    tag: 'Training',
+    title: 'Small-group training batch',
+    text: 'Small groups mean more speaking time, more feedback and faster progress for every learner.',
+  },
+]
+
+export const services =['Training', 'Writing', 'User Experience Writing', 'Editing']
